@@ -1,3 +1,4 @@
+export const runtime = 'nodejs';
 import React from 'react';
 import { ImageResponse } from 'next/og';
 import type { NextRequest } from 'next/server';
