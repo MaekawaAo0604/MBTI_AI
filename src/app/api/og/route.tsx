@@ -109,9 +109,9 @@ const typeData: Record<string, {
 };
 
 export async function GET(req: NextRequest) {
-  const fontData = await fetch(
-    new URL('../../../assets/NotoSansJP-Bold.ttf', import.meta.url)
-  ).then((res) => res.arrayBuffer());
+const fontData = await fetch(
+  `${process.env.NEXT_PUBLIC_SITE_URL}/fonts/NotoSansJP-Bold.ttf`
+).then(res => res.arrayBuffer());
 
   const { searchParams } = new URL(req.url);
   const type = searchParams.get('type')?.toUpperCase() || 'ENFJ';
