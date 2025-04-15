@@ -110,7 +110,7 @@ const typeData: Record<string, {
 
 export async function GET(req: NextRequest) {
 const fontData = await fetch(
-  `${process.env.NEXT_PUBLIC_SITE_URL}/fonts/NotoSansJP-Bold.ttf`
+  `process.env.NEXT_PUBLIC_SITE_URL/fonts/NotoSansJP-Bold.ttf`
 ).then(res => res.arrayBuffer());
 
   const { searchParams } = new URL(req.url);
